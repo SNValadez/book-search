@@ -20,24 +20,24 @@ type Query {
   }
 
   type User {
-      _id: []
-      username:
-      email:
-      bookCount:
+      _id: ID!
+      username: String!
+      email: String
+      bookCount: Int
       savedBooks: [Book]
   }
 
   type Book {
-      bookId:
-      authors:
-      description:
-      title:
-      image:
-      link:
+      bookId: ID!
+      authors: [String]
+      description: String
+      title: String!
+      image: String
+      link: String
   }
 
   type Auth {
-      token:
+      token: ID!
       user: User
   }
 `
