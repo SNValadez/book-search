@@ -7,9 +7,23 @@ import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 
 const SearchBooks = () => {
   // create state for holding returned google api data
-  const [searchedBooks, setSearchedBooks] = useState([]);
+    const [searchedBooks, setSearchedBooks] = useState([]);
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
+
+
+
+
+  
+
+
+  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+
+
+
+
+
+
 
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
@@ -19,6 +33,11 @@ const SearchBooks = () => {
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
+
+
+
+
+
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
