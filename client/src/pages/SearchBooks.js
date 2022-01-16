@@ -14,10 +14,22 @@ const SearchBooks = () => {
 
 
 
-  
+
 
 
   const [saveBook, { error }] = useMutation(SAVE_BOOK);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+
+
 
 
 
