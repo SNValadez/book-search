@@ -38,6 +38,9 @@ const SavedBooks = () => {
 
 
   const { username: userParam } = useParams();
+  //const [addFriend] = useMutation(ADD_FRIEND);
+  const { loading, data } = useQuery(GET_ME);
+
 
 
 
